@@ -4,7 +4,7 @@ class Admitto < Formula
   url "https://github.com/amolenk/Admitto/archive/376e0009de7430e312946fa3d81e812bf56f4022.tar.gz"
   sha256 "ae161b2cd4cbbce6ef996e227619763793f2bbe1de9bbe9ab4ba68dc5304e227"
   version "1.0.13"
-  license "MIT"
+  license "MIT+Commons Clause Restriction"
 
   # Requires .NET SDK to build
   depends_on "dotnet@9"
