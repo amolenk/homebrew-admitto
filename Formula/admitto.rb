@@ -1,10 +1,10 @@
 class Admitto < Formula
   desc "Admitto CLI"
   homepage "https://github.com/amolenk/Admitto"
-  url "PUT_URL_OF_TARBALL_HERE"
-  sha256 "PUT_SHA256_OF_TARBALL_HERE"
-  version "PUT_VERSION_NUMBER_HERE"
-  commit "PUT_GIT_COMMIT_HASH_HERE"
+  url "https://github.com/amolenk/Admitto/archive/3051b9eab88cce25c10ced998d1d3b54accd60f1.tar.gz"
+  sha256 "c2cfaff710566a74c63c4836ca7186edc6474f461e49f8454510743543a2bc9f"
+  version "1.0.12"
+  commit "3051b9eab88cce25c10ced998d1d3b54accd60f1"
   license "MIT"
 
   # Requires .NET SDK to build
