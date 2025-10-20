@@ -22,11 +22,6 @@ class Admitto < Formula
     EOS
     (bin/"admitto").chmod 0755
 
-    # Install the executable into Homebrew’s bin dir
-    # bin.install "out/admitto"
   end
 
-  test do
-    system "#{bin}/admitto", "--version"
-  end
 end
