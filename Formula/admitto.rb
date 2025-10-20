@@ -10,13 +10,20 @@ class Admitto < Formula
   depends_on "dotnet@9"
 
   def install
-    # Publish app as framework-dependent (requires user to have .NET runtime)
-    # Include the tarball sha256 in the informational version.
-    system "dotnet", "publish", "-c", "Release", "-o", "out",
+    project = "src/Admitto.Cli/Admitto.Cli.csproj"
+    system "dotnet", "publish", project, "-c", "Release", "-o", "out",
            "-p:AssemblyVersion=#{version}", "-p:FileVersion=#{version}", "-p:InformationalVersion=#{version}"
 
+    libexec.install Dir["out/*"]
+
+    (bin/"admitto").write <<~EOS
+      #!/bin/bash
+      exec "#{Formula["dotnet@9"].opt_bin}/dotnet" "#{libexec}/Admitto.Cli.dll" "$@"
+    EOS
+    (bin/"admitto").chmod 0755
+
     # Install the executable into Homebrew’s bin dir
-    bin.install "out/admitto"
+    # bin.install "out/admitto"
   end
 
   test do
