@@ -1,9 +1,9 @@
 class Admitto < Formula
   desc "Admitto CLI"
   homepage "https://github.com/amolenk/Admitto"
-  url "https://github.com/amolenk/Admitto/archive/8ff5388000a711975d204d83d776204754d1eb4f.tar.gz"
-  sha256 "016b4daa4dc3f51c6305afc78f851d568e299fb081d721f582f3fe64f5c177ef"
-  version "1.0.16"
+  url "https://github.com/amolenk/Admitto/archive/e864fe369a879d73d846a9e487c9f62057c75b86.tar.gz"
+  sha256 "0e5278953519e1d392519547ac5039d2e4a79516d97f1a183b2c9f99874bd4c5"
+  version "1.0.17"
   license "MIT+Commons Clause Restriction"
 
   # Requires .NET SDK to build
