@@ -10,8 +10,13 @@ class AdmittoCli < Formula
   depends_on "dotnet@9"
 
   def install
+    cli_dir = buildpath/"src/Admitto.Cli"
+    cli_dir.mkpath
 
-    (buildpath/"src/Admitto.Cli/appsettings.json").write <<~EOS
+    target = cli_dir/"appsettings.json"
+    target.unlink if target.exist?   # remove any existing file so we can overwrite
+
+    target.write <<~EOS
     {
       "Authentication": {
         "Authority": "https://login.microsoftonline.com/3491bee1-dc92-4c78-9193-2209b34dc958/v2.0",
@@ -25,7 +30,7 @@ class AdmittoCli < Formula
     }
     EOS
 
-    project = "src/Admitto.Cli/Admitto.Cli.csproj"
+    project = cli_dir/"Admitto.Cli.csproj"
     system "dotnet", "publish", project, "-c", "Release", "-o", "out",
            "-p:AssemblyVersion=#{version}", "-p:FileVersion=#{version}", "-p:InformationalVersion=#{version}"
 
