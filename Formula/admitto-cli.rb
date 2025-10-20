@@ -1,4 +1,4 @@
-class Admitto < Formula
+class AdmittoCli < Formula
   desc "Admitto CLI"
   homepage "https://github.com/amolenk/Admitto"
   url "https://github.com/amolenk/Admitto/archive/e864fe369a879d73d846a9e487c9f62057c75b86.tar.gz"
