@@ -3,7 +3,7 @@ class AdmittoCli < Formula
   homepage "https://github.com/amolenk/Admitto"
   url "https://github.com/amolenk/Admitto/archive/e864fe369a879d73d846a9e487c9f62057c75b86.tar.gz"
   sha256 "0e5278953519e1d392519547ac5039d2e4a79516d97f1a183b2c9f99874bd4c5"
-  version "1.0.17"
+  version "1.0.18"
   license "MIT+Commons Clause Restriction"
 
   # Requires .NET SDK to build
