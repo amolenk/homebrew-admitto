@@ -21,7 +21,7 @@ class AdmittoCli < Formula
       "Authentication": {
         "Authority": "https://login.microsoftonline.com/3491bee1-dc92-4c78-9193-2209b34dc958/v2.0",
         "ClientId": "ffeca9b6-fa75-4f7d-bb30-feecb1ef0842",
-        "Scope": "api://sandermolenk.com/admitto/Admin offline_access",
+        "Scope": "api://sandermolenkamp.com/admitto/Admin offline_access",
         "RequireHttps": true
       },
       "Admitto": {
