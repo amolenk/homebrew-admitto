@@ -7,6 +7,17 @@ class AdmittoCli < Formula
   license "MIT+Commons Clause Restriction"
 
   def install
+
+    # allow Homebrew's build environment to find dotnet installed with the official macOS installer
+    ENV.prepend_path "PATH", "/usr/local/bin"
+    ENV.prepend_path "PATH", "/usr/local/share/dotnet"
+
+    # make the error actionable if dotnet is not installed on the machine
+    unless Utils.which("dotnet")
+    odie "Building Admitto CLI requires the .NET SDK (dotnet).\n" \
+         "Install it from https://dotnet.microsoft.com/download."
+    end
+
     cli_dir = buildpath/"src/Admitto.Cli"
     cli_dir.mkpath
 
