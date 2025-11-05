@@ -6,9 +6,6 @@ class AdmittoCli < Formula
   version "1.0.27"
   license "MIT+Commons Clause Restriction"
 
-  # Requires .NET SDK to build
-  depends_on "dotnet@9"
-
   def install
     cli_dir = buildpath/"src/Admitto.Cli"
     cli_dir.mkpath
@@ -38,7 +35,7 @@ class AdmittoCli < Formula
 
     (bin/"admitto").write <<~EOS
       #!/bin/bash
-      exec "#{Formula["dotnet@9"].opt_bin}/dotnet" "#{libexec}/Admitto.Cli.dll" "$@"
+      exec "dotnet" "#{libexec}/Admitto.Cli.dll" "$@"
     EOS
     (bin/"admitto").chmod 0755
 
