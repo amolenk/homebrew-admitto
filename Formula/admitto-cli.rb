@@ -27,13 +27,14 @@ class AdmittoCli < Formula
     target.write <<~EOS
     {
       "Authentication": {
-        "Authority": "https://login.microsoftonline.com/3491bee1-dc92-4c78-9193-2209b34dc958/v2.0",
-        "ClientId": "ffeca9b6-fa75-4f7d-bb30-feecb1ef0842",
-        "Scope": "api://sandermolenkamp.com/admitto/Admin offline_access",
-        "RequireHttps": true
+        "Authority": "https://login.admitto.org/ed147a87-473b-43b4-ad35-e42e886c65d6/v2.0",
+        "ClientId": "1b5865c0-6cb7-4c35-a31b-ec8fac8ef0e9",
+        "Scope": "api://admitto.org/manage offline_access",
+        "RequireHttps": true,
+        "VerificationUri": "https://login.admitto.org/common/oauth2/deviceauth"
       },
       "Admitto": {
-        "Endpoint": "https://admitto.sandermolenkamp.com"
+        "Endpoint": "https://api.admitto.org"
       }
     }
     EOS
