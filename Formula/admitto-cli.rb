@@ -1,9 +1,9 @@
 class AdmittoCli < Formula
   desc "Admitto CLI"
   homepage "https://github.com/amolenk/Admitto"
-  url "https://github.com/amolenk/Admitto/archive/ce02324015cd454e88cd11c55368811bc1d9e6aa.tar.gz"
-  sha256 "77114413ad1227cf85c96a8bbd002ca19d912a9a76aa72628034ed84f23451f0"
-  version "1.0.56"
+  url "https://github.com/amolenk/Admitto/archive/60c433d7d98fe7b3e7b2aa171659d8cd94dd0d24.tar.gz"
+  sha256 "b9b4f897800d59dd76a420f8ac26f547dedd8ec41ceecbf7e1332abb336b7bb3"
+  version "1.0.57"
   license "MIT+Commons Clause Restriction"
 
   def install
